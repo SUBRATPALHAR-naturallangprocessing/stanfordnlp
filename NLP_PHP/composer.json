@@ -1,0 +1,5 @@
+{
+    "require": {
+        "dennis-de-swart/php-stanford-corenlp-adapter": "^7.1"
+    }
+}

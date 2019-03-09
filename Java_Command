@@ -1,0 +1,53 @@
+java -mx8g -cp "*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -port 9000
+
+
+
+-Xms8m      Selects a low initial JVM heap size for an application.
+-cp         ClassPath option
+edu.stanford.nlp.pipeline.StanfordCoreNLPServer     Package Name
+-port       Option
+
+
+
+desc:
+Xms8m = initialize a memory loction (JVM Heap)
+with classpath - giving the class path to *
+then we are specifying the package name
+
+and passing the -port option and port value for the program
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+..

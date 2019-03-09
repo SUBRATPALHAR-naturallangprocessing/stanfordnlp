@@ -1,0 +1,49 @@
+STANFORD NLP SERVER :
+
+TO Start The NLP Sever Locally Use The Command      :    java -mx8g -cp "*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -port 9000
+
+
+
+
+
+OpenIE ::
+    OpenIE creates "subject-relation-object" tuples.
+    This is similar (but not the same) as the "Subject-Verb-Object" concept of the English language.
+
+    Notes: - OpenIE is only available on the Java offline version, not with the "online" mode.
+             See the installation walkthrough below - OpenIE data is not always available.
+             Sometimes the result array might show empty, this is not an error.
+
+        http://nlp.stanford.edu/software/openie.html
+        https://en.wikipedia.org/wiki/Subject-verb-object
+
+    Installation / Walkthrough for Java server version
+        Step 1: install Java    :   https://java.com/en/download/help/index_installing.xml?os=All+Platforms&j=8&n=20
+        Step 2: installing the Stanford CoreNLP 3.7.0 server    :   http://stanfordnlp.github.io/CoreNLP/index.html#download
+        Step 3: Port for server :   Default port for the Java server is port 9000. If port 9000 is not available you can change the port in the "bootstrap.php" file. Example:
+
+            define('CURLURL' , 'http://localhost:9000/');
+
+        Step 4: Start the CoreNLP serve from the command line.  -   Go to the download directory, then enter the following command:
+
+        java -mx8g -cp "*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -port 9000
+
+        Important note: the Stanford manual says "-mx4g", however I found that this can lead to a Java OutOfMemory error.
+        It is also important to use a 64-bit operating system with at enough memory (8Gb or more recommended)
+
+        Step 5: Test if the server has started by surfing to it's URL   :   http://localhost:9000/
+        When you surf to this URL, you should see the CoreNLP GUI. If you have problems with installation you can check the manual:
+        http://stanfordnlp.github.io/CoreNLP/corenlp-server.html
+
+        Step 6: Set ONLINE_API to FALSE
+        In "bootstrap.php" set define('ONLINE_API' , FALSE). This tells the Adapter to use the Java version
+
+
+
+
+
+
+
+
+
+..
